@@ -1,26 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex flex-col bg-gray-200">
+    <NavBar/>
+    <div class="flex justify-center p-2 md:p-10 min-h-[calc(100vh-60px)] items-start">
+      <ProductImage />
+    </div>
+    
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductImage from './components/ProductImage.vue';
+import NavBar from './components/NavBar.vue';
+import './main.css';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ProductImage,
+    NavBar
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
